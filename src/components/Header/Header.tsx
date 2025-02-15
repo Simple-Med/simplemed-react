@@ -31,9 +31,10 @@ const HeaderCategoryContainer = styled.div`
   gap: 50px;
   align-items: center;
 
-  p {
+  a {
     font-size: 2.2vmin;
     color: #737d8f;
+    cursor: pointer;
   }
 `;
 
@@ -45,6 +46,7 @@ const HeaderRequestDemonstrationButton = styled.button`
   outline: none;
   background-color: #fff;
   padding: 15px;
+  cursor: pointer;
 `;
 
 const Header = () => {
@@ -55,10 +57,10 @@ const Header = () => {
         <HeaderContent>
           <img src={Logo} alt="Logo" />
           <HeaderCategoryContainer>
-            <p>Sobre</p>
-            <p>Benefícios</p>
-            <p>Demonstração</p>
-            <p>Contato</p>
+            <a>Sobre</a>
+            <a>Benefícios</a>
+            <a>Demonstração</a>
+            <a>Contato</a>
           </HeaderCategoryContainer>
           <HeaderRequestDemonstrationButton>
             Solicitar Demonstração
