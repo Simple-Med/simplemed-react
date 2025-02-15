@@ -15,11 +15,11 @@ body {
   text-rendering: optimizeLegibility; 
   height: 100%;
   margin: 0;
-  font-family: Arial;
+  font-family: Poppins;
   font-optical-sizing: auto;
   font-style: normal;
   
-  background-color: #FFFFFF;
+  background-color:rgb(251, 253, 255);
   box-sizing: border-box;
 }
 
