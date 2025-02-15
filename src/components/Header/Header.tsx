@@ -5,6 +5,7 @@ const HeaderContainer = styled.header`
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
 `;
 
 const HeaderDecoration = styled.div`

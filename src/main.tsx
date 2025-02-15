@@ -15,7 +15,7 @@ body {
   text-rendering: optimizeLegibility; 
   height: 100%;
   margin: 0;
-  font-family: Arial;
+  font-family: Poppins;
   font-optical-sizing: auto;
   font-style: normal;
   
