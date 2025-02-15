@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin: 80px 0px ;
 `;
 
 const FooterContacts = styled.div`
@@ -16,6 +18,7 @@ const FooterContacts = styled.div`
     font-size: 2vmin;
     font-weight: 400;
     color: #dae7f9;
+    cursor: pointer;
   }
 `;
 
@@ -26,6 +29,7 @@ const FooterCopywrite = styled.div`
     font-size: 2vmin;
     font-weight: 400;
     color: #dae7f9;
+    
   }
 `;
 

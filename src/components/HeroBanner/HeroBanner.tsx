@@ -8,6 +8,7 @@ const HeroBannerContainer = styled.section`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  margin-bottom: 60px;
 
  
 `;

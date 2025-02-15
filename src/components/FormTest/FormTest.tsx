@@ -7,6 +7,7 @@ const FormTestContainer = styled.section`
   border-radius: 20px;
   box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
   padding: 40px 0px;
+  margin-bottom: 140px;
 `;
 
 const FormContent = styled.form`
@@ -36,14 +37,13 @@ const InputContainer = styled.div`
 
   input {
     width: 100%;
-    padding: 15px 0px;
+    padding: 15px 15px;
     border: 2px solid #737d8f;
     border-radius: 10px;
   }
 
   input::placeholder {
     font-size: 1.7vmin;
-    padding: 10px;
     color: #737d8f;
   }
 `;

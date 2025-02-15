@@ -19,6 +19,7 @@ import styled from 'styled-components';
   font-weight: 600;
   line-height: 100%;
   text-align: center;
+  color: #2C6262;
   }
 
   p {
@@ -26,6 +27,7 @@ import styled from 'styled-components';
     font-weight: 400;
     line-height: normal;
     text-align: center;
+    color: #0B132A;
   }
 
   img {
