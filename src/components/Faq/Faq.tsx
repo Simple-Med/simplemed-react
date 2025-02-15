@@ -13,7 +13,7 @@ const FaqContainer = styled.section`
   h2 {
     font-size: 6vmin;
     font-weight: 300;
-    color: #000;
+    color: #fff;
     margin-bottom: 20px;
   }
 `;
