@@ -44,6 +44,7 @@ const CtaButton = styled.button`
   width: 30%;
   font-weight: 600;
   box-shadow: 0 12px 20px rgba(67, 211, 208, 0.3);
+  cursor: pointer;
 `
 
 const HeroImageContainer = styled.div`
