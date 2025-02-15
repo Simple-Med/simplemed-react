@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { HeroBanner } from "./components/HeroBanner";
 import { FormTest } from "./components/FormTest";
+import { Faq } from "./components/Faq";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <HeroBanner />
       <FormTest />
+      <Faq />
     </>
   );
 }
