@@ -1,17 +1,24 @@
-import { StyledDiv, Title, Paragraph, StyledIcon } from './styles';
+import { StyledDiv } from './styles';
 
-const InfoBalloon = () => {
+type Props = {
+  title: string;
+  text: string;
+  imageSrc: string;
+
+}
+
+const InfoBalloon = ({title, text, imageSrc }: Props) => {
   return (
+  
     <StyledDiv>
-      <StyledIcon />
-     <Title>
-      testando
-     </Title>
-     <Paragraph>
-      testando testando testando testando  testando testando testando testando testando testando 
-    </Paragraph>
+      <img src={imageSrc} alt={title} />
+      <h1>{title}</h1>
+      <p>{text}</p>
     </StyledDiv>
+    
+    
   );
 };
+
 
 export default InfoBalloon;
