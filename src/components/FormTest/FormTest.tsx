@@ -114,7 +114,7 @@ const FormTest = () => {
     },
   });
 
-  function handleInputChange(e) {
+  function handleInputChange(e: any) {
     const result = forms.update(
       formData,
       e.target.name,
