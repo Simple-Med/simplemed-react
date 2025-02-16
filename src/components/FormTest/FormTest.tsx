@@ -8,6 +8,10 @@ const FormTestContainer = styled.section`
   box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
   padding: 40px 0px;
   margin-bottom: 140px;
+
+  @media (max-width: 440px) {
+    width: 350px;
+  }
 `;
 
 const FormContent = styled.form`
@@ -23,6 +27,12 @@ const FormContent = styled.form`
     font-size: 3.5vmin;
     font-weight: 400;
     color: #2c6262;
+    text-align: center;
+
+    @media (max-width: 440px) {
+    font-size: 26px;
+    
+}
   }
 `;
 
@@ -45,10 +55,15 @@ const InputContainer = styled.div`
   input::placeholder {
     font-size: 1.7vmin;
     color: #737d8f;
+
+    @media (max-width: 440px) {
+    font-size: 14px;
+}
   }
 `;
 
 const CtaButton = styled.button`
+  font-family: 'Poppins';
   margin-top: 20px;
   padding: 15px 10px;
   font-size: 2vmin;
@@ -60,6 +75,10 @@ const CtaButton = styled.button`
   font-weight: 600;
   box-shadow: 0 12px 20px rgba(67, 211, 208, 0.3);
   cursor: pointer;
+
+  @media (max-width: 440px) {
+    font-size: 16px;
+}
 `;
 
 const FormTest = () => {

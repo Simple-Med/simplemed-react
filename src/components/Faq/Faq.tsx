@@ -10,6 +10,10 @@ const FaqContainer = styled.section`
   justify-content: center;
   gap: 25px;
 
+  @media (max-width: 440px) {
+    gap: 20px;
+}
+
   h2 {
     font-size: 6vmin;
     font-weight: 300;

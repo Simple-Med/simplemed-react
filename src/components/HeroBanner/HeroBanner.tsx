@@ -7,8 +7,12 @@ const HeroBannerContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   margin-bottom: 60px;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    gap: 54px;
+  }
 
  
 `;
@@ -17,6 +21,7 @@ const HeroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
+  width: 660px;
   
   gap: 25px;
 
@@ -24,7 +29,8 @@ const HeroTextContainer = styled.div`
     font-size: 7vmin;
     color: #0B132A;
     font-weight: 600;
-    line-height: 66px;
+    line-height: 1.2em;
+
   }
 
   h2{
@@ -32,10 +38,19 @@ const HeroTextContainer = styled.div`
     color: #737D8F;
     font-weight: 400;
     line-height: 25px;
+
+    @media (max-width: 440px) {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    width: 330px;
   }
 `
 
 const CtaButton = styled.button`
+  font-family: 'Poppins';
   padding: 20px 10px;
   font-size: 2vmin;
   border: none;
@@ -46,6 +61,11 @@ const CtaButton = styled.button`
   font-weight: 600;
   box-shadow: 0 12px 20px rgba(67, 211, 208, 0.3);
   cursor: pointer;
+
+  @media (max-width: 440px) {
+    width: 160px;
+    font-size: 16px;
+  }
 `
 
 const HeroImageContainer = styled.div`
@@ -61,8 +81,8 @@ const HeroBanner = () => {
     <>
       <HeroBannerContainer>
         <HeroTextContainer>
-          <h1>A solução inteligente para <br/> médicos organizarem <br/>seus atendimentos.</h1>
-          <h2>Simplifique sua rotina, economize tempo e garanta a <br/> segurança dos dados de seus pacientes.</h2>
+          <h1>A solução inteligente para médicos organizarem seus atendimentos.</h1>
+          <h2>Simplifique sua rotina, economize tempo e garanta a segurança dos dados de seus pacientes.</h2>
           <CtaButton>Teste Agora</CtaButton>
         </HeroTextContainer>
           <HeroImageContainer>
