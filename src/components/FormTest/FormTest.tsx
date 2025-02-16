@@ -98,7 +98,7 @@ const FormTest = () => {
       type: "text",
       placeholder: "nome@email.com",
       isValid: true,
-      validation: function (value) {
+      validation: function (value: string) {
         return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
           value.toLowerCase()
         );
@@ -115,26 +115,14 @@ const FormTest = () => {
   });
 
   function handleInputChange(e) {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: {
-        ...prev[name],
-        value,
-      },
-    }));
+    const result = forms.update(
+      formData,
+      e.target.name,
+      e.target.value
+    );
+    setFormData(result);
   }
 
-  function handleInputBlur(e) {
-    const { name, value } = e.target;
-    setFormData((prev) => {
-      const updatedField = {
-        ...prev[name],
-        isValid: name === "email" ? prev[name].validation(value) : true,
-      };
-      return { ...prev, [name]: updatedField };
-    });
-  }
 
   return (
     <FormTestContainer>
@@ -152,16 +140,11 @@ const FormTest = () => {
 
         <InputContainer>
           <label>Email</label>
-          <StyledInput
+          <input
             {...formData.email}
             onChange={handleInputChange}
-            onBlur={handleInputBlur}
             value={formData.email.value}
-            isValid={formData.email.isValid}
           />
-          {!formData.email.isValid && (
-            <ErrorMessage>{formData.email.message}</ErrorMessage>
-          )}
         </InputContainer>
 
         <InputContainer>
@@ -178,18 +161,5 @@ const FormTest = () => {
     </FormTestContainer>
   );
 };
-
-const StyledInput = styled.input<{ isValid: boolean }>`
-  border: 2px solid ${(props) => (props.isValid ? "#737d8f" : "red")} !important;
-  background-color: ${(props) =>
-    props.isValid ? "white" : "#ffe6e6"} !important;
-`;
-
-
-const ErrorMessage = styled.span`
-  color: red;
-  font-size: 12px;
-  margin-top: 4px;
-`;
 
 export { FormTest };
