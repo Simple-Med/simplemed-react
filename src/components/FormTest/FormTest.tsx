@@ -32,9 +32,8 @@ const FormContent = styled.form`
     text-align: center;
 
     @media (max-width: 440px) {
-    font-size: 26px;
-    
-}
+      font-size: 26px;
+    }
   }
 `;
 
@@ -59,13 +58,13 @@ const InputContainer = styled.div`
     color: #737d8f;
 
     @media (max-width: 440px) {
-    font-size: 14px;
-}
+      font-size: 14px;
+    }
   }
 `;
 
 const CtaButton = styled.button`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   margin-top: 20px;
   padding: 15px 10px;
   font-size: 2vmin;
@@ -80,7 +79,7 @@ const CtaButton = styled.button`
 
   @media (max-width: 440px) {
     font-size: 16px;
-}
+  }
 `;
 
 const FormTest = () => {
@@ -144,7 +143,11 @@ const FormTest = () => {
 
         <InputContainer>
           <label>Nome</label>
-          <input {...formData.name} onChange={handleInputChange} value={formData.name.value} />
+          <input
+            {...formData.name}
+            onChange={handleInputChange}
+            value={formData.name.value}
+          />
         </InputContainer>
 
         <InputContainer>
@@ -156,12 +159,18 @@ const FormTest = () => {
             value={formData.email.value}
             isValid={formData.email.isValid}
           />
-          {!formData.email.isValid && <ErrorMessage>{formData.email.message}</ErrorMessage>}
+          {!formData.email.isValid && (
+            <ErrorMessage>{formData.email.message}</ErrorMessage>
+          )}
         </InputContainer>
 
         <InputContainer>
           <label>Especialidade Médica</label>
-          <input {...formData.especiality} onChange={handleInputChange} value={formData.especiality.value} />
+          <input
+            {...formData.especiality}
+            onChange={handleInputChange}
+            value={formData.especiality.value}
+          />
         </InputContainer>
 
         <CtaButton>Solicitar</CtaButton>
@@ -170,10 +179,12 @@ const FormTest = () => {
   );
 };
 
-const StyledInput = styled.input`
+const StyledInput = styled.input<{ isValid: boolean }>`
   border: 2px solid ${(props) => (props.isValid ? "#737d8f" : "red")} !important;
-  background-color: ${(props) => (props.isValid ? "white" : "#ffe6e6")} !important;
+  background-color: ${(props) =>
+    props.isValid ? "white" : "#ffe6e6"} !important;
 `;
+
 
 const ErrorMessage = styled.span`
   color: red;
