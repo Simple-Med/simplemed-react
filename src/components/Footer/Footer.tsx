@@ -6,12 +6,12 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin: 80px 0px ;
+  margin: 40px 0px ;
 `;
 
 const FooterContacts = styled.div`
   display: flex;
-  jutify-content: center;
+  justify-content: center;
   gap: 60px;
 
   p {
@@ -24,7 +24,7 @@ const FooterContacts = styled.div`
 
 const FooterCopywrite = styled.div`
   display: flex;
-  jutify-content: center;
+  justify-content: center;
   p {
     font-size: 2vmin;
     font-weight: 400;

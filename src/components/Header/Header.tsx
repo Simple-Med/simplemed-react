@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import Logo from "../../assets/Logo.svg";
+import MiniLogo from '../../assets/MiniLogo.svg';
 
 const HeaderContainer = styled.header`
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
+  
 `;
 
 const HeaderDecoration = styled.div`
@@ -22,15 +24,47 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   padding: 20px 0px;
 
+  @media (max-width: 440px) {
+    justify-content: center;
+    
+  }
+
+`;
+
+const LogoWeb = styled.div`
   img {
     width: 220px;
   }
+
+  @media (max-width: 440px) {
+    display: none;
+  }
 `;
+
+const LogoMobile = styled.div`
+
+  img {
+    width: 77px;
+    display: none;
+
+    @media (max-width: 441px) {
+      display: block;
+      
+    }
+  }
+
+`;
+
 
 const HeaderCategoryContainer = styled.div`
   display: flex;
   gap: 50px;
   align-items: center;
+
+  @media (max-width: 440px) {
+    display: none;
+  }
+
 
   a {
     font-size: 2.2vmin;
@@ -48,15 +82,27 @@ const HeaderRequestDemonstrationButton = styled.button`
   background-color: #fff;
   padding: 15px;
   cursor: pointer;
+
+  @media (max-width: 440px) {
+    display: none;
+  }
+  
 `;
 
 const Header = () => {
+ 
   return (
     <>
       <HeaderContainer>
         <HeaderDecoration></HeaderDecoration>
         <HeaderContent>
-          <img src={Logo} alt="Logo" />
+          <LogoWeb>
+            <img src={Logo} alt="" />
+          </LogoWeb>
+          <LogoMobile>
+            <img src={MiniLogo} alt="" />
+          </LogoMobile>
+        
           <HeaderCategoryContainer>
             <a>Sobre</a>
             <a>Benefícios</a>

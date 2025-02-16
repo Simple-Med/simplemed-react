@@ -4,6 +4,7 @@ import { FormTest } from "./components/FormTest";
 import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import Info from "./components/Info";
+import InfoMobile from "./components/InfoMobile";
 import Preview from "./components/Preview";
 import styled from "styled-components";
 
@@ -30,6 +31,7 @@ function App() {
       <Header />
       <HeroBanner />
       <Info />
+      <InfoMobile />
       <Preview />
       <BackgroundSection>
         <BackgroundInForm />

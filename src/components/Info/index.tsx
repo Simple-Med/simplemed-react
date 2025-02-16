@@ -5,9 +5,9 @@ import  LockIcon  from '../../assets/LockIcon.png';
 import  ZapIcon  from '../../assets/ZapIcon.png';
 import  TabIcon  from '../../assets/TabIcon.png';
 
-const Info = () => {
+const InfoMobile = () => {
 return(
-    <StyledBlock>]
+    <StyledBlock>
         <TitleBlock>
             BENEFÍCIOS
         </TitleBlock>
@@ -21,4 +21,4 @@ return(
 )
 };
 
-export default Info;
+export default InfoMobile;
