@@ -8,8 +8,11 @@ const GlobalStyle = createGlobalStyle`
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-
+html { 
+  overflow-x: hidden;
+}
 body {
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale; 
   text-rendering: optimizeLegibility; 
